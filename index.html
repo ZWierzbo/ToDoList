@@ -12,6 +12,7 @@
     <link href="css/container.css" rel="stylesheet">
     <link href="css/section.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/tasks.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="js/script.js" defer></script>
 </head>
@@ -28,8 +29,8 @@
              
             <div class="section__body">
                 <form class="form js-form">
-                    <input class="js-newTask">
-                    <button>Add a new task</button>
+                    <input class="form__input js-newTask" placeholder="What's left to do?">
+                    <button class="form__button">Add</button>
                 </form>
             </div>
         </section>
@@ -38,7 +39,7 @@
             <h2 class="section__header">List:</h2>
 
             <div class="section__body">
-                <ul class="js-tasks"></ul>
+                <ul class="tasks js-tasks"></ul>
             </div>
 
         </section>
