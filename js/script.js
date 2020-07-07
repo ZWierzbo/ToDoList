@@ -28,42 +28,50 @@
         render();
     };
 
-    const bindEvents = () => {
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
-        removeButtons.forEach((removeButton, index) => {
+        removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
-                removeTask(index);
+                removeTask(taskIndex);
             });
         });
 
-        const toggleDoneButtons = document.querySelectorAll(".js-done");
+    }
 
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+    const bindToggleDoneEvents = () => {
+        const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
+
+        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
             toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
+                toggleTaskDone(taskIndex);
             });
         });
     }
 
     const render = () => {
-        let htmlString = "";
+        let tasksListHTMLContent = "";
 
         for (const task of tasks) {
-            htmlString += `
-            <li
-                ${task.done ? " style=\"text-decoration: line-through\"" : ""}
+            tasksListHTMLContent += `
+            <li 
+                class="tasks__item js-task"
                 >
-                    <button class="js-done">Done?</button>
-                    <button class="js-remove">Delete</button>
-                ${task.content}
+                    <button class="tasks__button tasks__button--toggleDone js-toggleDone"> 
+                    ${task.done ? "✓" : ""}
+                    </button>
+                    <span class="tasks__content${task.done ? " tasks__content--done " : ""}">
+                    ${task.content}</span>
+                    <button class="tasks__button tasks__button--remove js-remove">✗</button>
+                
             </li>
             `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = htmlString
+        document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent
 
-        bindEvents();
+        bindRemoveEvents();
+        bindToggleDoneEvents();
     }
 
 
@@ -90,6 +98,6 @@
     };
 
     init();
-    
+
 
 }
