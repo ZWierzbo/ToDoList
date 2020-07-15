@@ -42,7 +42,7 @@
         });
     }
 
-    const render = () => {
+    const renderTasks = () => {
         let tasksListHTMLContent = "";
 
         for (const task of tasks) {
@@ -62,6 +62,29 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent
+    };
+
+    const renderButtons = () => {
+        const hideDone = document.querySelector(".js-hideDone")
+        const markAll = document.querySelector(".js-markAsDone")
+        const addButton = document.querySelector(".js-addButton")
+
+        const onClick = () => {
+            hideDone.innerHTML = `<button class="headerButton">Hide Done</button>`
+            markAll.innerHTML = `<button class="headerButton">Mark All</button>`
+
+        };
+
+        addButton.addEventListener("click", onClick);
+      
+
+    };
+
+    const bindButtonEvents = () => {};
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
 
         bindRemoveEvents();
         bindToggleDoneEvents();
@@ -96,3 +119,7 @@
 
 
 }
+
+// const done = task => task.done;
+
+// const allTasksDone = tasks.filter(done);

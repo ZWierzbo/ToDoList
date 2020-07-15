@@ -30,13 +30,16 @@
             <div class="section__body">
                 <form class="form js-form">
                     <input class="form__input js-newTask" placeholder="What's left to do?">
-                    <button class="form__button">Add</button>
+                    <button class="form__button js-addButton">Add</button>
                 </form>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section__header">Things To Do</h2>
+            <h2 class="section__header">Things To Do 
+                <div class="js-hideDone"></div>
+                <div class="js-markAsDone"></div>
+            </h2>
 
             <div class="section__body">
                 <ul class="tasks js-tasks"></ul>
