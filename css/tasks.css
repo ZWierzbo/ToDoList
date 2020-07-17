@@ -13,6 +13,10 @@
     border-bottom: 1px solid #dddddd;
 }
 
+.tasks__item--hidden {
+    display: none;
+}
+
 .tasks__content--done {
     text-decoration: line-through;
 }
@@ -23,29 +27,29 @@
     width: 30px;
     height: 30px;
     padding: 0;
-    transition: 1s;
+    transition: background 0.3s;
 }
 
 .tasks__button--toggleDone {
-    background-color: hsl(130, 71%, 38%);
+    background-color: hsl(120, 61%, 34%);
 }
 
 .tasks__button--toggleDone:hover {
-    background-color: hsl(130, 71%, 44%);
+    background-color: hsl(120, 61%, 39%);
 }
 
 .tasks__button--toggleDone:active {
-    background-color: hsl(130, 71%, 50%);
+    background-color: hsl(120, 61%, 45%);
 }
 
 .tasks__button--remove {
-    background-color: hsl(0, 84%, 34%);
+    background-color: hsl(348, 83%, 47%);
 }
 
 .tasks__button--remove:hover {
-    background-color: hsl(0, 84%, 45%);
+    background-color: hsl(348, 83%, 52%);
 }
 
 .tasks__button--remove:active {
-    background-color: hsl(0, 84%, 55%);
+    background-color: hsl(348, 83%, 57%);
 }

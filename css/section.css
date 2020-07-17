@@ -5,22 +5,19 @@
 }
 
 .section__header {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 20px;
-
-    font-size: 20px;
-    padding: 20px;
-    margin: 0;
     border-bottom: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
 }
 
-.headerButton {
-    border: none;
-    background-color: transparent;
-    font-size: 80%;
-    color: rgb(2, 94, 94);
-    
+.section__title {
+    font-size: 20px;
+    margin: 0;
 }
 
 .section__body {
