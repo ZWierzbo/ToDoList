@@ -1,3 +1,4 @@
+# To Do List 
 
 ## Description
 
@@ -9,7 +10,7 @@ https://zwierzbo.github.io/ToDoList/
 
 ## Screenshot
 
-![Przykładowe działanie](demo/demo.gif)
+![App demo](https://github.com/ZWierzbo/ToDoList/blob/master/demo/Demo.gif)
 
 ## Languages used
 
