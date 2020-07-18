@@ -30,7 +30,7 @@
 
     const markAllTasksDone = () => {
         tasks = tasks.map((task) => ({
-            ...tasks,
+            ...task,
             done: true,
         }));
 
@@ -99,7 +99,7 @@
         </button>
         <button
             class="buttons__button js-markAllDone"
-            ${tasks.every(({ done }) => done) ? "disabled" : ""}
+            ${ tasks.every(({ done }) => done) ? "disabled" : ""}
         >
             Mark All
         </button>
