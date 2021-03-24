@@ -8,7 +8,7 @@
     border-bottom: 1px solid #ddd;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 20px;
+    grid-gap: 20px;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
